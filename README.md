@@ -1,18 +1,21 @@
 # WordForest worlds · Миры «Словолесья»
 
-Downloadable maps and localized word packs for WordForest. This repository contains content packages and delivery notes; it does not contain the Android application source, signing keys, or player data.
+Downloadable world content for WordForest. The Android application source, content keys, signing keys and player data are not published here.
 
 ## Мир сказок — предварительный просмотр
 
-[Открыть тестовый выпуск](https://github.com/Alex-x7/WordForest-worlds/releases/tag/world-fairytales-v1)
+[Открыть зашифрованный пакет 2](https://github.com/Alex-x7/WordForest-worlds/releases/tag/world-fairytales-v2)
 
-- Карта: 3840 × 2560.
-- Пакет: 4 829 240 байт (около 4,83 МБ).
-- 14 мест карты, 112 смысловых позиций и 896 форм на восьми языках.
-- Статус: предварительный просмотр; полные игровые словари и маршруты ещё не выпущены.
+- Формат: `.wfp`, AES-256-GCM с проверкой подлинности.
+- Требуется приложение 0.16.2-dev или новее.
+- Карта: 3840 × 2560; пакет около 4,83 МБ.
+- 14 мест, 112 смысловых позиций и 896 локализованных форм на восьми языках.
+- Полные игровые словари и маршруты пока не выпущены.
 
-Файлы публичны: их можно скачать без игры и без входа в GitHub. Игра проверяет размер и SHA-256 пакета перед установкой, затем хранит скачанные данные на устройстве для открытия без сети.
+Контейнеры доступны для скачивания публично, но не открываются как обычный ZIP. Игра проверяет размер, SHA-256 и подлинность зашифрованных данных, устанавливает содержимое в свою приватную папку и затем открывает его без сети.
 
-SHA-256 `fairytales-1.zip`:
+Это ограничивает обычный просмотр файлов; защита не предназначена против обратной разработки клиента и не является DRM.
 
-`4d3e3cc281f40c2f8f2988a5781901d65e3b288596f3c7448f2b81ff82788df2`
+SHA-256 `fairytales-2.wfp`:
+
+`14cf16128a2b140c7d06917ad265ba1dedec04c25079c5f766b308fd96342e34`
