@@ -1,25 +1,14 @@
-# WordForest worlds · Миры «Словолесья»
+# WordForest content storage
 
-Downloadable world content for WordForest. Application source, content keys, private signing keys and player data are not published here.
+Technical storage used by the WordForest application to retrieve versioned content.
 
-## Мир сказок — игровой пакет 4
+- `catalog/index.json`: digitally signed content index.
+- Release attachments: encrypted `.wfp` asset packages.
 
-[Предварительный игровой пакет](https://github.com/Alex-x7/WordForest-worlds/releases/tag/world-fairytales-v4) для приложения **0.17.0 и новее**:
+The application verifies the index signature, package size, SHA-256 and AES-256-GCM authentication before storing accepted content locally for offline use.
 
-- 14 игровых областей на одной карте 3840 × 2560.
-- Русский, английский, украинский, испанский, немецкий, французский, португальский и итальянский.
-- От 40 до 51 слова в каждой области на каждом языке; всего 4936 доступных игровых форм.
-- 5240 объяснений к 655 смысловым позициям, включая совместимые записи для старых сохранений. Язык объяснений выбирается независимо от языка слов.
-- Зашифрованный пакет около 5,05 МБ. После установки карта и словари работают без интернета.
+Application source code, content keys, private signing keys and player data are not stored in this repository.
 
-SHA-256 `fairytales-4.wfp`:
+This repository is public. Package encryption prevents ordinary browsing of the enclosed assets; it does not provide DRM or prevent reverse engineering.
 
-`c033f78ab41d290433c362e12a5fa641dbbcdd0e361d7f034fbed89e963455a6`
-
-## Каталог миров
-
-[`catalog/index.json`](catalog/index.json) содержит подписанные метаданные для протокола контента 2: названия, описания, доступность, стоимость в игровых очках и параметры загрузки. Совместимое приложение проверяет цифровую подпись и сохраняет последнюю исправную версию каталога. Обновление каталога не заменяет установленный словарь до явной загрузки нового пакета.
-
-Вложения `.wfp` доступны публично, но не открываются как обычный ZIP. Игра проверяет размер, SHA-256 и AES-256-GCM перед установкой в свою приватную папку. Шифрование затрудняет обычный просмотр файлов; это не DRM и не защита от обратной разработки приложения.
-
-[Предыдущий пакет 2](https://github.com/Alex-x7/WordForest-worlds/releases/tag/world-fairytales-v2) сохранён для предварительного просмотра в приложении 0.16.2. Он не содержит полных игровых словарей.
+Published package revisions are immutable. Updates use new revision identifiers and a new signed catalog version.
